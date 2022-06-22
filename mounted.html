@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Slide</title>
+		<style type="text/css">
+			body {
+				background: lightgrey;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			img {
+				overflow: hidden;
+			}
+			.imageBox {
+				overflow: scroll;
+			}
+			.oneRow {
+				display: flex;
+				flex-direction: row;
+			}
+			.imgWrapper {
+				position: relative;
+			}
+			.picture {
+				z-index: 1;
+			}
+      img {
+        height:400px;
+      }
+			.tag {
+				background: white;
+				color: black;
+				opacity: 0.5;
+				margin-right: 3px;
+				cursor: pointer;
+				font-size: 150%;
+			}
+			.favorite {
+				position: absolute;
+				left: 0px;
+				bottom: 5px;
+				z-index: 10;
+			}
+			.chosen {
+				background: black;
+				color: white;
+				font-weight: bold;
+			}
+			.unchosen {
+				background: white;
+				color: black;
+				font-style: italic;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="imageBox">
+				<div class="oneRow">
+      		<div class="imgWrapper">
+            <img class="picture" src="http://i.imgur.com/8j6J1da.jpg" />
+            <div class="favorite">
+              <span>
+                <span class="tag unchosen">one</span>
+                <span class="tag unchosen">two</span>
+                <span class="tag unchosen">three</span>
+                <span class="tag chosen">four</span>
+                <span class="tag unchosen">five</span>
+                <span class="tag chosen">six</span>
+                <span class="tag unchosen">seven</span>
+                <span class="tag unchosen">eight</span>
+                <span class="tag unchosen">nine</span>
+                <span class="tag unchosen">ten</span>
+                <span class="tag unchosen">eleven</span>
+                <span class="tag unchosen">twelve</span>
+             </span>
+            </div>
+          </div>
+          <div class="imgWrapper">
+            <img class="picture" src="http://i.imgur.com/aHgVnNx.jpg" />
+            <div class="favorite">
+              <span>
+                <span class="tag unchosen">one</span>
+                <span class="tag chosen">two</span>
+                <span class="tag unchosen">three</span>
+              </span>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script type="module">
+      const { createApp } = Vue
+
+      createApp({
+        data() {
+          return {
+          }
+        },
+      }).mount('#app')
+    </script>
+	</body>
+</html>
